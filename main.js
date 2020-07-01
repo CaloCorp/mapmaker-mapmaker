@@ -1,20 +1,78 @@
-function doubleAll() {
+function doubleAll(array) {
+result = []
+
+for(let i=0;i < array.length;i++){
+
+  result.push(array[i]*2)
+}
+return result 
 }
 
-function absoluteValues() {
+function absoluteValues(array) {
+
+  result = []
+
+  for (let i =0;i < array.length;i++){
+    if (array[i]* -1 <= 0 ){
+
+      result.push(array[i])
+    }
+    else if (array[i]* -1 >= 0){
+
+      result.push(array[i] * -1)
+    }
+    
+  }
+  return result 
 }
 
-function yelledGreetings() {
+function yelledGreetings(array) {
+ let result = []
+
+  for(let i=0;i <array.length;i++){
+
+    result.push(array[i] +'!')
+  }
+
+  return result  
 }
 
-function changeToInitials() {
+function changeToInitials(array) {
+  let capitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let result =[]
+
+  for(let i=0; i <array.length;i++){
+
+    if(capitals.includes(array[i])){
+
+      result.push(1)
+    }
+  }
+
+  return result 
 }
 
-function doubleOdd() {
-}
+function doubleOdd(array) {
 
+  let result =[]
+
+  for(let i=0;i < array.length;i++){
+
+   
+   if(array[i] % 2 === 1 || array[i] % 2 === -1 ){
+
+    result.push(array[i] * 2)
+   }
+
+   else
+    result.push(array[i])
+   
+
+}
+return result
+}
 function upperCaseFirstLetters(words) {
-  const uppercased = [];
+  const upperCased = [];
   
   for (let i=0; i < words.length; i++){
     
@@ -22,10 +80,10 @@ function upperCaseFirstLetters(words) {
     
     const upper = word[0].toUpperCase() + word.slice(1).toLowerCase();
     
-    uppercased.push(upper);
+    upperCased.push(upper);
     
   }
-  return uppercased
+  return upperCased
 }
 function add1ToLeft() {
 }
